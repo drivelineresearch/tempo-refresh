@@ -1,0 +1,87 @@
+{
+  "checks": [
+    "extension loads and popup talks to the installed service worker",
+    "popup starts a real 30-second tab alarm",
+    "real timed tab reload fires with popup closed",
+    "tab timer does not reload neighboring or other-window tabs",
+    "Pause clears the real Chrome alarm",
+    "Resume recreates the alarm",
+    "Stop clears the timer and badge",
+    "invalid custom intervals show actionable validation",
+    "window controls create an alarm for the target window",
+    "window timer refreshes live members including new tabs",
+    "a second Chrome window remains untouched",
+    "window badges never leak to another window",
+    "light/running fits Chrome's 380 × 600 popup",
+    "light/paused fits Chrome's 380 × 600 popup",
+    "light/idle fits Chrome's 380 × 600 popup",
+    "dark/running fits Chrome's 380 × 600 popup",
+    "dark/paused fits Chrome's 380 × 600 popup",
+    "dark/idle fits Chrome's 380 × 600 popup",
+    "six light/dark state accessibility scans have no violations",
+    "keyboard controls retain visible focus",
+    "the installed popup makes no external network requests",
+    "a tab moved out no longer follows its former window timer",
+    "closing the target removes the actual alarm",
+    "browser pages have no JavaScript exceptions"
+  ],
+  "accessibility": [
+    {
+      "theme": "light",
+      "status": "running",
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "status": "paused",
+      "violations": []
+    },
+    {
+      "theme": "light",
+      "status": "idle",
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "status": "running",
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "status": "paused",
+      "violations": []
+    },
+    {
+      "theme": "dark",
+      "status": "idle",
+      "violations": []
+    }
+  ],
+  "screenshots": [
+    "light-running.png",
+    "light-paused.png",
+    "light-idle.png",
+    "dark-running.png",
+    "dark-paused.png",
+    "dark-idle.png"
+  ],
+  "network": [
+    "chrome-extension://ojpojeimbjbmllkhckbppnkpmdlhemnh/popup.html?tabId=2021554745",
+    "chrome-extension://ojpojeimbjbmllkhckbppnkpmdlhemnh/popup.css",
+    "chrome-extension://ojpojeimbjbmllkhckbppnkpmdlhemnh/popup.js",
+    "chrome-extension://ojpojeimbjbmllkhckbppnkpmdlhemnh/icons/icon-48.png",
+    "chrome-extension://ojpojeimbjbmllkhckbppnkpmdlhemnh/fonts/geist-latin.woff2",
+    "chrome-extension://ojpojeimbjbmllkhckbppnkpmdlhemnh/fonts/geist-mono.woff2",
+    "chrome-extension://ojpojeimbjbmllkhckbppnkpmdlhemnh/engine.js",
+    "chrome-extension://ojpojeimbjbmllkhckbppnkpmdlhemnh/popup.html?tabId=2021554745",
+    "chrome-extension://ojpojeimbjbmllkhckbppnkpmdlhemnh/popup.css",
+    "chrome-extension://ojpojeimbjbmllkhckbppnkpmdlhemnh/popup.js",
+    "chrome-extension://ojpojeimbjbmllkhckbppnkpmdlhemnh/icons/icon-48.png",
+    "chrome-extension://ojpojeimbjbmllkhckbppnkpmdlhemnh/engine.js",
+    "chrome-extension://ojpojeimbjbmllkhckbppnkpmdlhemnh/fonts/geist-latin.woff2",
+    "chrome-extension://ojpojeimbjbmllkhckbppnkpmdlhemnh/fonts/geist-mono.woff2"
+  ],
+  "chromium": "156.0.8078.4",
+  "passed": true,
+  "errors": []
+}

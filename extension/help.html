@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Tempo — Help &amp; privacy</title>
+  <link rel="stylesheet" href="popup.css">
+  <link rel="stylesheet" href="help.css">
+</head>
+<body>
+  <main>
+    <header><img src="icons/icon-48.png" width="40" height="40" alt=""><h1>Tempo</h1></header>
+    <p class="intro">Refresh on your schedule.</p>
+    <h2>Start a timer</h2>
+    <p>Open a website, click the Tempo icon, choose <strong>This tab</strong> or <strong>This window</strong>, set an interval, and click <strong>Start refreshing</strong>. Close the popup; the timer keeps running.</p>
+    <p>Intervals range from 30 seconds to 24 hours. Use a preset or enter a custom number of seconds or minutes. <strong>Bypass cache</strong> asks Chrome for fresh content instead of its cached copy. A website’s own service worker or server can still cache content.</p>
+    <h2>One window means one window</h2>
+    <p>A window timer follows the tabs currently in that window, including newly opened tabs. Move a tab out, and it leaves that window’s timer. Tabs in other windows remain untouched.</p>
+    <p>A tab timer stays with that tab when you switch tabs or move it to another window. If you move it into a window with a timer, it adopts that window’s timer. Starting a window timer replaces separate tab timers in that window.</p>
+    <h2>Quick controls</h2>
+    <p>Right-click a webpage or the Tempo toolbar icon, then choose Tempo. Start a preset for the tab or window, open a custom interval, pause/resume the active timer, or stop all timers in just that window. Chrome does not let extensions add entries to its native tab-strip menu.</p>
+    <p>The toolbar badge shows <strong>ON</strong> for a tab timer, <strong>WIN</strong> for a window timer, and <strong>II</strong> when paused. Pause stops refreshing. Resume and Update timer each start a fresh interval.</p>
+    <h2>Timing and unsaved work</h2>
+    <p>Chrome may delay timers when your device is busy or asleep. Tempo does not keep it awake or replay missed refreshes. Tabs still loading are skipped for that cycle. Browser-protected pages may reject refreshes.</p>
+    <p>Refreshing can discard unsaved form edits or prompt to resubmit a form. Pause or stop before typing or editing. Tempo does not inspect page content or detect unsaved work.</p>
+    <p>Timers survive the extension’s background worker going idle, but end when Chrome exits, the extension is reloaded/updated/disabled, or their target tab/window closes. Your last interval and cache preference stay saved locally.</p>
+    <h2>Privacy policy</h2>
+    <p><strong>Effective October 11, 2026.</strong> Tempo does not collect or transmit personal information, browsing history, page content, analytics, or advertising identifiers. It has no accounts, tracking, advertisements, payments, or remote code.</p>
+    <p>Tempo stores your most recent interval and cache preference on this device. Active timers use session-only tab/window IDs, settings, timing, and refresh counts; that state is cleared when the browser exits. When you activate Tempo, Chrome may temporarily expose the selected tab’s title and URL. Tempo uses them only in memory to label the target and recognize protected pages; it does not store or transmit them.</p>
+    <p>Timer refreshes instruct Chrome to reload the websites you selected. Those websites receive normal page requests under their own privacy policies. Tempo itself makes no network requests.</p>
+    <h2>Permissions</h2>
+    <ul>
+      <li><strong>alarms:</strong> schedule refreshes even when the popup is closed.</li>
+      <li><strong>storage:</strong> save preferences locally and timer state for this browser session.</li>
+      <li><strong>contextMenus:</strong> provide right-click controls.</li>
+      <li><strong>activeTab:</strong> temporarily identify the tab you select. No permission to read all websites or browsing history is requested.</li>
+    </ul>
+    <p>Remove Tempo to delete its local settings. For support or privacy inquiries, use the publisher contact shown on Tempo’s Chrome Web Store listing.</p>
+    <p class="helper">Tempo is an independent utility. The interface takes inspiration from Driveline product design; it is not an official Driveline or Google product. Geist fonts are bundled under the SIL Open Font License.</p>
+  </main>
+</body>
+</html>

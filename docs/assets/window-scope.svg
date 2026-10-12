@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="230" viewBox="0 0 1000 230" role="img" aria-labelledby="title desc">
+  <title id="title">One timer affects only one Chrome window</title>
+  <desc id="desc">The selected window's tabs refresh. Tabs in another window are unaffected.</desc>
+  <rect width="1000" height="230" rx="12" fill="#161616"/>
+  <g font-family="system-ui,sans-serif" font-size="16">
+    <text x="32" y="38" fill="#FFA300" font-weight="700">ONE TIMER. ONE WINDOW.</text>
+    <rect x="32" y="64" width="450" height="130" rx="10" fill="#222222" stroke="#FFA300" stroke-width="2"/>
+    <path d="M32 104h450" stroke="#555555"/>
+    <text x="52" y="90" fill="#FFFFFF" font-weight="700">Selected window</text>
+    <text x="329" y="90" fill="#FFA300" font-weight="700">Refresh every 1m</text>
+    <g fill="#FFA300"><rect x="52" y="126" width="124" height="44" rx="6"/><rect x="190" y="126" width="124" height="44" rx="6"/><rect x="328" y="126" width="134" height="44" rx="6"/></g>
+    <g fill="#1A1A1A" font-weight="700"><text x="73" y="154">Dashboard</text><text x="214" y="154">Live board</text><text x="351" y="154">New tab</text></g>
+    <rect x="518" y="64" width="450" height="130" rx="10" fill="#222222" stroke="#777777"/>
+    <path d="M518 104h450" stroke="#555555"/>
+    <text x="538" y="90" fill="#FFFFFF" font-weight="700">Another window</text>
+    <text x="846" y="90" fill="#BBBBBB">Untouched</text>
+    <g fill="#343434" stroke="#777777"><rect x="538" y="126" width="124" height="44" rx="6"/><rect x="676" y="126" width="124" height="44" rx="6"/><rect x="814" y="126" width="134" height="44" rx="6"/></g>
+    <g fill="#EEEEEE"><text x="575" y="154">Mail</text><text x="711" y="154">Docs</text><text x="826" y="154">Everything else</text></g>
+  </g>
+</svg>

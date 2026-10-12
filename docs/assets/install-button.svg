@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="276" height="44" viewBox="0 0 276 44" role="img" aria-labelledby="title">
+  <title id="title">Install Tempo from the Chrome Web Store</title>
+  <rect x=".5" y=".5" width="275" height="43" rx="8" fill="#FFA300" stroke="#A66400"/>
+  <path d="M27 16a8 8 0 1 0 2 10M23 15h7v7" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="44" y="27" fill="#1A1A1A" font-family="system-ui,sans-serif" font-size="14" font-weight="700">Install from Chrome Web Store</text>
+</svg>

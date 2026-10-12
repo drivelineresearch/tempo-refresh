@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Tempo</title>
+  <link rel="stylesheet" href="popup.css">
+  <script type="module" src="popup.js"></script>
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <img class="brand-icon" src="icons/icon-48.png" alt="" width="32" height="32">
+      <div class="brand"><h1>Tempo</h1><p>Refresh on your schedule</p></div>
+      <span id="status" class="status" data-state="idle">Ready</span>
+    </header>
+
+    <section class="target-section" aria-label="Refresh target">
+      <fieldset class="scope-group">
+        <legend>Refresh</legend>
+        <div class="scope-switch">
+          <label class="scope-option"><input type="radio" name="scope" value="tab" checked><span>This tab</span></label>
+          <label class="scope-option"><input type="radio" name="scope" value="window"><span>This window</span></label>
+        </div>
+      </fieldset>
+      <p id="target" class="target" title="">Finding your tab…</p>
+      <p id="scope-help" class="helper">Only this tab will refresh.</p>
+    </section>
+
+    <section class="timer" aria-label="Timer status">
+      <p id="timer-label" class="eyebrow">Next refresh</p>
+      <div id="countdown" class="countdown" aria-label="No timer running">—<span class="countdown-unit">:—</span></div>
+      <div class="progress-track" aria-hidden="true"><div id="progress" class="progress"></div></div>
+      <p id="timer-detail" class="timer-detail" aria-live="polite">Choose an interval to get started</p>
+    </section>
+
+    <form id="timer-form" novalidate>
+      <fieldset class="interval-group">
+        <legend>Every <span id="interval-help" class="range-hint">30 seconds to 24 hours.</span></legend>
+        <div class="presets" role="group" aria-label="Interval presets">
+          <button type="button" class="preset" data-seconds="30" aria-pressed="false">30 sec</button>
+          <button type="button" class="preset" data-seconds="60" aria-pressed="true">1 min</button>
+          <button type="button" class="preset" data-seconds="300" aria-pressed="false">5 min</button>
+          <button type="button" class="preset" data-seconds="900" aria-pressed="false">15 min</button>
+        </div>
+        <div class="custom-interval">
+          <label for="interval">Custom interval</label>
+          <div class="interval-inputs">
+            <input id="interval" type="number" min="1" max="86400" step="1" value="1" inputmode="numeric" aria-describedby="interval-help error" required>
+            <select id="unit" aria-label="Interval unit"><option value="60">minutes</option><option value="1">seconds</option></select>
+          </div>
+        </div>
+      </fieldset>
+
+      <label class="option"><input id="bypass-cache" type="checkbox"><span>Bypass cache <small>Request fresh page content</small></span></label>
+      <p id="error" class="error" role="alert" hidden></p>
+      <button id="primary" class="primary" type="submit" disabled>Start refreshing</button>
+      <div id="running-actions" class="running-actions" hidden>
+        <button id="pause" class="secondary" type="button">Pause</button>
+        <button id="stop" class="secondary stop" type="button">Stop</button>
+      </div>
+    </form>
+
+    <footer class="footer"><p>Right-click a page or the Tempo icon for quick controls.</p><p>Timers end when Chrome closes. Refreshing can discard unsaved edits.</p><a href="help.html" target="_blank" rel="noopener">Help &amp; privacy</a></footer>
+  </main>
+</body>
+</html>

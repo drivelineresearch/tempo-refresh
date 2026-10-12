@@ -1,0 +1,11 @@
+# Tempo design brief
+
+The user requested a beautiful, minimal Chrome extension following dc-reviewagent.drivelinebaseball.com, plus a Claude Opus 5.5 design pass.
+
+Live inspection: the reference is a LIGHT interface, not a marketing page. White canvas, near-black text (#1A1A1A), goldenrod (#FFA300) actions with dark text, quiet gray borders, 6–10px radii, Geist body/UI, Geist Mono counts. Local brand skill software-mode allows host font/theme tokens to override Gotham/Lato. Follow this live reference; avoid shipping proprietary Gotham font files or claiming official Driveline affiliation. Use a custom Tempo refresh icon.
+
+Create extension/popup.css for extension/popup.html. You may adjust classes or add decorative aria-hidden elements in HTML, but preserve all IDs, inputs, values, button types, hidden defaults, accessibility attributes, and script/link relationships. Do not touch the JS engine, tests, manifest, or any other implementation. Also create design/opus-design.md with your design rationale.
+
+Design at actual 380px popup width and under Chrome's 600px popup height. The layout should be compact but not tiny: body/control text around 14–16px; tertiary footer can be 12px. Countdowns are the central visual anchor. Beautiful through proportion, whitespace, typography, one gold primary action. No hero ornament, gradients, heavy shadows, or dashboard card soup. Light default matching reference; prefers-color-scheme dark variant is welcome. Visible outlines and keyboard focus, 4.5:1 text contrast, 3:1 controls, no white-on-gold. [hidden] must always remain display:none. Timer count in Geist Mono, normal UI in locally bundled Geist; fonts will be extension/fonts/geist-latin.woff2 (variable 100–900) and geist-mono.woff2 with OFL license. Nothing may be loaded from a network at runtime.
+
+Styling hooks: .status[data-state=idle|running|paused], preset [aria-pressed=true], checked scope radio, #progress width set by JS, loading controls disabled, #running-actions hidden when idle. Chrome default popup opens at width:380px. Ensure no clipping, overlap, or unwanted vertical scrolling with the running actions visible. Keep forms semantic and focused on tab/window, interval, bypass cache, start/update, pause, stop.
